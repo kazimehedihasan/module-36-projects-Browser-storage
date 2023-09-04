@@ -19,7 +19,17 @@ const showDisplay = (product, quantity) =>{
     li.innerText = `${product} ${quantity}`;
     ul.appendChild(li);
 }
+const getStoredShoppingCart = (product) => {
+  const storedCard = localStorage.getItem('card');
+  let card = {};
+  if (storedCard) {
+    card = JSON.parse(storedCard)
+  }
+  return card;
+}
+
+
 
 const saveProductToLocalStorage  = (product, quantity) => {
 
-}
+} 
